@@ -51,7 +51,10 @@ if __name__ == '__main__':
     check_scripts()
 
     topo = BroadcastTopo()
-    net = Mininet(topo = topo, link = TCLink, controller = None) 
+    # net = Mininet(topo = topo, link = TCLink, controller = None) 
+    # *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+    net = Mininet(topo=topo, link=TCLink, controller=None, autoSetMacs=True)
+
 
     h1, h2, h3, b1 = net.get('h1', 'h2', 'h3', 'b1')
     h1.cmd('ifconfig h1-eth0 10.0.0.1/8')
