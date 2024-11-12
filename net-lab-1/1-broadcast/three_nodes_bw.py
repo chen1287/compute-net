@@ -1,5 +1,7 @@
 #!/usr/bin/python
 
+from __future__ import print_function
+
 import os
 import sys
 import glob
@@ -27,7 +29,7 @@ def check_scripts():
                 found = True
                 break
         if not found:
-            print('`%s` is required but missing, which could be installed via `apt` or `aptitude`' % (program))
+            print('`%s` is required but missing. which could be installed via `apt` or `aptitude`' % (program))
             sys.exit(2)
 
 # Mininet will assign an IP address for each interface of a node 
@@ -51,10 +53,7 @@ if __name__ == '__main__':
     check_scripts()
 
     topo = BroadcastTopo()
-    # net = Mininet(topo = topo, link = TCLink, controller = None) 
-    # *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
-    net = Mininet(topo=topo, link=TCLink, controller=None, autoSetMacs=True)
-
+    net = Mininet(topo = topo, link = TCLink, controller = None) 
 
     h1, h2, h3, b1 = net.get('h1', 'h2', 'h3', 'b1')
     h1.cmd('ifconfig h1-eth0 10.0.0.1/8')
