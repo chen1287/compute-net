@@ -10,7 +10,7 @@ void broadcast_packet(iface_info_t *iface, const char *packet, int len)
 		if(ifa->index!=iface->index)
 		{
 			iface_send_packet(ifa,packet,len);
-			fprintf(stdout, "TODO: broadcast packet.\n");
+			// fprintf(stdout, "TODO: broadcast packet.\n");
 		}
 //		if(memcmp(&iface->mac,&ifa->mac,sizeof(iface->mac)))
 	}
