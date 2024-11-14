@@ -4,7 +4,6 @@
 #include "ether.h"
 #include "utils.h"
 #include "types.h"
-#include "packet.h"
 #include "log.h"
 #include <stdlib.h>
 #include <string.h>
@@ -15,6 +14,9 @@
 
 #include <pthread.h>
 #include <signal.h>
+
+#include <unistd.h>
+
 stp_t *stp;
 
 const u8 eth_stp_addr[] = { 0x01, 0x80, 0xC2, 0x00, 0x00, 0x01 };

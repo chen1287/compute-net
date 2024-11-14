@@ -58,6 +58,8 @@
   "C_Cpp_Runner.msvcSecureNoWarnings": false,
   "files.associations": {
     "pthread.h": "c",
-    "stdio.h": "c"
+    "stdio.h": "c",
+    "inet.h": "c",
+    "stdlib.h": "c"
   }
 }
