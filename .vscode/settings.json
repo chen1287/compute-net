@@ -60,6 +60,10 @@
     "pthread.h": "c",
     "stdio.h": "c",
     "inet.h": "c",
-    "stdlib.h": "c"
+    "stdlib.h": "c",
+    "ip.h": "c",
+    "arpcache.h": "c",
+    "log.h": "c",
+    "rtable.h": "c"
   }
 }
